@@ -20,7 +20,6 @@ public class OrderSheetController {
         this.orderSheetService = orderSheetService;
     }
 
-    //poderia ser uma DTO aqui
     @PostMapping
     @RequestMapping("/add")
     public ResponseEntity<OrderSheet> saveOrderSheet(@RequestBody OrderSheet orderSheet){
