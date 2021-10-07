@@ -1,7 +1,7 @@
 package com.redlightbar.controller;
 
-import com.redlightbar.model.Employee;
-import com.redlightbar.service.EmployeeService;
+import com.redlightbar.model.User;
+import com.redlightbar.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,21 +11,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/employees")
-public class EmployeeController {
+@RequestMapping("/api/users")
+public class UserController {
 
-    private EmployeeService employeeService;
+    private UserService userService;
 
     @Autowired
-    public EmployeeController(EmployeeService employeeService) {
-        this.employeeService = employeeService;
+    public UserController(UserService userService) {
+        this.userService = userService;
     }
 
     //poderia ser uma DTO aqui
     @PostMapping
     @RequestMapping("/add")
-    public ResponseEntity<Employee> saveEmployee(@RequestBody Employee employee){
-        var savedEmployee = employeeService.saveEmployee(employee);
-        return new ResponseEntity<Employee>(savedEmployee, HttpStatus.CREATED);
+    public ResponseEntity<User> saveUser(@RequestBody User user){
+        var savedUser = userService.saveUser(user);
+        return new ResponseEntity<User>(savedUser, HttpStatus.CREATED);
     }
 }
