@@ -1,6 +1,5 @@
 package com.redlightbar;
 
-import com.cmeza.sdgenerator.annotation.SDGenerator;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.querydsl.QuerydslPredicateExecutor;
