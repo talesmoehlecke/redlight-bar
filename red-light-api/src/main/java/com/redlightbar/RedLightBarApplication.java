@@ -5,19 +5,19 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.querydsl.QuerydslPredicateExecutor;
 
-@SDGenerator(
-        entityPackage = "red-light-api.src.main.java.com.redlightbar.model",
-        repositoryPackage = "red-light-api.src.main.java.com.redlightbar.repository",
-        managerPackage = "red-light-api.src.main.java.com.redlightbar.service",
-        repositoryPostfix = "Repository",
-        managerPostfix = "Service",
-        onlyAnnotations = false,
-        debug = false,
-        overwrite = false,
-        additionalExtends = {
-                QuerydslPredicateExecutor.class
-        }
-)
+//@SDGenerator(
+//        entityPackage = "com.redlightbar.model",
+//        repositoryPackage = "com.redlightbar.repository",
+//        managerPackage = "com.redlightbar.service",
+//        repositoryPostfix = "Repository",
+//        managerPostfix = "Service",
+//        onlyAnnotations = false,
+//        debug = false,
+//        overwrite = false,
+//        additionalExtends = {
+//                QuerydslPredicateExecutor.class
+//        }
+//)
 @SpringBootApplication
 public class RedLightBarApplication {
 
